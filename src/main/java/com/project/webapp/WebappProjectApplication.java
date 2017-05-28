@@ -17,11 +17,4 @@ public class WebappProjectApplication {
 		SpringApplication.run(WebappProjectApplication.class, args);
 	}
 
-
-	@PostConstruct
-	public void goPost() {
-		User u = new User();
-		System.out.println(u);
-		userRepository.save(u);
-	}
 }
