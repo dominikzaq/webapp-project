@@ -19,7 +19,7 @@ import javax.annotation.PostConstruct;
 public class RegistrationController {
 
     @Autowired
-    UserRepository userRepository;
+    UserService userService;
 
     @GetMapping("/createuser")
     public String creatingForm(Model model) {
@@ -30,15 +30,7 @@ public class RegistrationController {
     @PostMapping("/createuser")
     public String creatingSubmit(@ModelAttribute("user") User user) {
         System.out.println(user);
-        userRepository.save(user);
+        userService.saveUser(user);
         return "login";
     }
-
-    @PostConstruct
-    public void goPost() {
-        User u = new User();
-        System.out.println(u);
-        userRepository.save(u);
-    }
-
 }
