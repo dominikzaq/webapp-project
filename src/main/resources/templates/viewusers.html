@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+</head>
+<body>
+<div th:include="template/header"/>
+
+<div class="container">
+	<table class="table table-bordered">
+		<thead>
+		<tr>
+			<th>idUser</th>
+			<th>Name</th>
+			<th>Surname</th>
+			<th>Country</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>Dominik</td>
+			<td>kieltyka</td>
+			<td>poland</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
