@@ -12,7 +12,6 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, unique = true)
     private Integer id;
     private String email;
     private String password;

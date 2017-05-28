@@ -1,5 +1,6 @@
 package com.project.webapp.controller;
 
+import com.project.webapp.domain.Login;
 import com.project.webapp.domain.User;
 import com.project.webapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +21,19 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginForm(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("login", new Login());
         return "login";
     }
 
     @PostMapping("/login")
-    public String loginSubmit(@ModelAttribute User user) {
-        System.out.println(user);
-        User u = userService.getByEmailAndPassword(user.getEmail(), user.getPassword());
+    public String loginSubmit(@ModelAttribute Login login) {
+/*
+        User u = userService.getByEmailAndPassword(login.getEmail(), login.getPassword());
+*/
+        System.out.println("u");
+/*
         return u == null? "login" : "mainuser";
+*/
+        return "mainuser";
     }
 }

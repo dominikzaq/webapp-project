@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void saveUser(User user) {
-        userRepository.save(user);
+        userRepository.saveAndFlush(user);
     }
 
 

@@ -7,7 +7,6 @@ import org.hibernate.validator.constraints.Email;
  */
 public class Login {
 
-    @Email
     private String email;
     private String password;
 

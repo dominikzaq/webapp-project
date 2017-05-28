@@ -29,8 +29,7 @@ public class RegistrationController {
 
     @PostMapping("/createuser")
     public String creatingSubmit(@ModelAttribute("user") User user) {
-        System.out.println(user);
         userService.saveUser(user);
-        return "login";
+        return "home";
     }
 }
