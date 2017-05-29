@@ -21,4 +21,19 @@ public class WebappProjectApplication {
 		SpringApplication.run(WebappProjectApplication.class, args);
 	}
 
+
+	@Bean
+	public CommandLineRunner demo(UserRepository repository) {
+		return (args) -> {
+			repository.save(new User("a","aa","dominik","prorok","poland"));
+			repository.save(new User("d","d","kamil","dudzinski","poland"));
+			repository.save(new User("d","d","mariola","krowa","poland"));
+			repository.save(new User("d","d","ryszard","pudzian","poland"));
+			repository.save(new User("d","d","aneta","kieltyka","poland"));
+			repository.save(new User("d","d","marcin","kieltyka","poland"));
+			repository.save(new User("d","d","tomek","kolasa","poland"));
+			repository.save(new User("d","d","dominik","prorok","poland"));
+			repository.save(new User("d","d","kamil","kolasa","poland"));
+		};
+	}
 }

@@ -20,7 +20,7 @@
 	<form th:action="@{createuser}" th:object="${user}" method="post">
 		<div class="form-group">
 			<label>Email:</label>
-			<input type="text" th:field="*{email}" class="form-control" placeholder="Email" required="true"/>
+			<input type="email" th:field="*{email}" class="form-control" placeholder="Email" required="true"/>
 		</div>
 
 		<div class="form-group">

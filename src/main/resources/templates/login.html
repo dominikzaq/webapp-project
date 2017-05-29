@@ -22,7 +22,7 @@
 </nav>
 
 <div class="container">
-	<form th:action="${mainuse}" th:object="${login}" method="post">
+	<form th:action="@{login}" th:object="${login}" method="post">
 		<div class="form-group">
 			<label>Email:</label>
 			<input type="text" th:field="*{email}" class="form-control" placeholder="Email" required="true"/>
