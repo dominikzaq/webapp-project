@@ -9,7 +9,7 @@ import com.project.webapp.domain.User;
 public interface UserService {
     Iterable<User> getAllUsers();
     User validateUser(Login login);
-    void removeUser();
+    void deleteUser(int id);
     void  insertUser();
     void updateUser();
     void saveUser(User user);

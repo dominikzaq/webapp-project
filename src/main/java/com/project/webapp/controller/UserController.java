@@ -8,7 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by domin on 5/23/17.
@@ -27,8 +30,12 @@ public class UserController {
 
     public void getUser() {}
 
-    public void removeUser() {
-        userService.removeUser();
+
+    @RequestMapping(value = "/doDelete", method = RequestMethod.POST)
+    public String deleteUser(HttpSession session) {
+        User user  = (User) session.getAttribute("user1");
+        userService.deleteUser(user.getId());
+        return "home";
     }
 
     public void insertUser() {}

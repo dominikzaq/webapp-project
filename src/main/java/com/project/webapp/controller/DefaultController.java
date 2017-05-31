@@ -1,6 +1,7 @@
 package com.project.webapp.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -10,22 +11,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DefaultController {
 
-    @RequestMapping("/mainuser")
+    @GetMapping("/mainuser")
     public String welcome() {
         return "mainuser";
     }
 
-    @RequestMapping("/home")
+    @GetMapping("/home")
     public String index() {
         return "home";
     }
 
-    @RequestMapping("/viewusers")
+    @GetMapping("/viewusers")
     public String viewUsers() {
         return "viewusers";
     }
 
-    @RequestMapping("/viewuser")
+    @GetMapping("/viewuser")
     public String viewUser() {
         return "viewuser";
     }

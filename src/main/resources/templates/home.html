@@ -9,12 +9,17 @@
 
 </head>
 <body>
-<div th:include="template/header"/>
-
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="login.html" class="glyphicon glyphicon-user">Log in</a></li>
+			<li><a href="createuser.html" class="glyphicon glyphicon-log-in">Create user</a></li>
+		</ul>
+	</div>
+</nav>
 
 <div class="container">
-	<li><a href="login.html">Log in</a></li>
-	<li><a href="createuser.html">Create user</a></li>
+	<h1>My first application (mvc, spring boot, thymeleaf, jpa)</h1>
 </div>
 
 	<script type="text/javascript"
