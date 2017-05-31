@@ -21,14 +21,9 @@ public class DefaultController {
         return "home";
     }
 
-    @GetMapping("/viewusers")
-    public String viewUsers() {
-        return "viewusers";
-    }
-
-    @GetMapping("/viewuser")
-    public String viewUser() {
-        return "viewuser";
+    @GetMapping("/viewprofil")
+    public String viewProfil() {
+        return "viewprofil";
     }
 
 }

@@ -13,6 +13,7 @@
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
 				<li><a href="search.html">Search</a></li>
+				<li><a href="viewprofil.html">My profil</a></li>
 				<li>
 					<form th:action="@{doDelete}" method="post">
 						<button type="submit"> delete account</button>
@@ -24,15 +25,8 @@
 			</ul>
 		</div>
 	</nav>
-
 	<div class="jumbotron text-center">
-		<h1>Welcome in my first application in spring boot</h1>
-	</div>
-	<div class="container">
-		<h1>Your id is: </h1><h1 th:text="${session.user1.getId()}" th:unless="${session == null}"></h1>
-		<h1>Your name is: </h1><h1 th:text="${session.user1.getName()}" th:unless="${session == null}"></h1>
-		<h1>Your surname is: </h1><h1 th:text="${session.user1.getSurname()}" th:unless="${session == null}"></h1>
-		<h1>Your country is: </h1><h1 th:text="${session.user1.getCountry()}" th:unless="${session == null}"></h1>
+		<h1>Welcome in my application</h1>
 	</div>
 	<!-- /.container -->
 	<script type="text/javascript"
