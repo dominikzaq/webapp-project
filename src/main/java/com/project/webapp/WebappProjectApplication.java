@@ -25,15 +25,15 @@ public class WebappProjectApplication {
 	@Bean
 	public CommandLineRunner demo(UserRepository repository) {
 		return (args) -> {
-			repository.save(new User("a","aa","dominik","prorok","poland"));
-			repository.save(new User("d","d","kamil","dudzinski","poland"));
-			repository.save(new User("d","d","mariola","krowa","poland"));
-			repository.save(new User("d","d","ryszard","pudzian","poland"));
-			repository.save(new User("d","d","aneta","kieltyka","poland"));
-			repository.save(new User("d","d","marcin","kieltyka","poland"));
-			repository.save(new User("d","d","tomek","kolasa","poland"));
-			repository.save(new User("d","d","dominik","prorok","poland"));
-			repository.save(new User("d","d","kamil","kolasa","poland"));
+			repository.save(new User("aaa@aaa.pl","aaa","dominik","prorok","poland"));
+			repository.save(new User("bbb@bbb.pl","bbb","kamil","dudzinski","poland"));
+			repository.save(new User("ccc@ccc.pl","ccc","mariola","krowa","poland"));
+			repository.save(new User("ddd@ddd.pl","ddd","ryszard","pudzian","poland"));
+			repository.save(new User("eee@eee.pl","eee","aneta","kieltyka","poland"));
+			repository.save(new User("fff@fff.pl","fff","marcin","kieltyka","poland"));
+			repository.save(new User("ggg@ggg.pl","ggg","tomek","kolasa","poland"));
+			repository.save(new User("hhh@hhh.pl","hhh","dominik","prorok","poland"));
+			repository.save(new User("iii@iii.pl","iii","kamil","kolasa","poland"));
 		};
 	}
 }
